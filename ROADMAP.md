@@ -4,10 +4,10 @@ This file is both the research map and the project progress record. It is expect
 
 ## Status convention
 
-- `[ ]` — not yet completed.
-- `[ ] [ACTIVE]` — the current primary research node. There should normally be only one primary active node because the project is sequential rather than parallel.
-- `[ ] [OPEN]` — meaningful work exists, but important questions remain unresolved before the node can be treated as currently usable.
-- `[x]` — the node currently has a usable result and the project can progress beyond it. This does **not** mean the result is immutable.
+- `[ ]` - not yet completed.
+- `[ ] [ACTIVE]` - the current primary research node. There should normally be only one primary active node because the project is sequential rather than parallel.
+- `[ ] [OPEN]` - meaningful work exists, but important questions remain unresolved before the node can be treated as currently usable.
+- `[x]` - the node currently has a usable result and the project can progress beyond it. This does **not** mean the result is immutable.
 
 Indentation expresses the relationship between larger questions and their subquestions. Within the same level, top-to-bottom order is the current intended research order unless the user decides to change it.
 
@@ -28,7 +28,33 @@ Indentation expresses the relationship between larger questions and their subque
     - [x] Prefer general composable primitives over mechanic-specific special cases
     - [x] Distinguish the research model from claims about Dota 2's internal implementation architecture
 
-  - [ ] [OPEN] World and runtime object model
+  - [ ] [OPEN] Build an observed structure inventory before further abstraction
+    - [x] Adopt the research rhythm: Observe -> Record -> Normalize -> Compare -> Abstract -> Pressure-test
+    - [x] Freeze current Object / Relation / Property / Contribution ideas as working hypotheses during the initial observation pass
+    - [ ] First observation batch
+      - [ ] Hero
+        - [x] Record definition-facing structure
+        - [ ] Record runtime-visible structure
+        - [ ] Record relationships and linked structures
+      - [ ] Ordinary units / creeps
+      - [ ] Buildings
+      - [ ] Abilities
+      - [ ] Items
+    - [ ] First abstraction checkpoint after the first observation batch
+      - [ ] Normalize repeated field and relationship names
+      - [ ] Build cross-subject structure matrices
+      - [ ] Revise the gameplay data model only from repeated observed patterns
+    - [ ] Second observation batch
+      - [ ] Modifiers / buffs / debuffs
+      - [ ] Projectiles and other short-lived spatial objects
+      - [ ] World objects such as trees, wards, runes, and similar discrete objects
+      - [ ] World state such as terrain, vision, time, and spatial fields
+      - [ ] Player, Team, and Match-level structures
+    - [ ] Second abstraction checkpoint
+      - [ ] Re-test Object / Relation / Property / Contribution hypotheses
+      - [ ] Add new primitives only when repeated observations require them
+
+  - [ ] [OPEN] World and runtime object model - working hypothesis, frozen during initial observation batch
     - [x] Distinguish definition data from runtime instances
     - [x] Use Object, Relation, and WorldState as the current top-level runtime categories
     - [x] Treat environment as a human-facing concept rather than a single formal data category
@@ -36,7 +62,7 @@ Indentation expresses the relationship between larger questions and their subque
     - [ ] Resolve representative boundary cases: Ability, Modifier, Item, Projectile, Tree, and similar objects
     - [ ] Determine which relationships need stored runtime identity/state versus being derived from other state
 
-  - [ ] [OPEN] Property model
+  - [ ] [OPEN] Property model - working hypothesis, frozen during initial observation batch
     - [x] Treat Property as a value query rather than assuming every property is a stored field
     - [x] Distinguish definition values, stored runtime values, derived values, and aggregate values as the current working sources
     - [x] Represent external property influence provisionally as Contribution rather than mutating base definition data
@@ -55,16 +81,6 @@ Indentation expresses the relationship between larger questions and their subque
     - [ ] Define event, condition, transition, and time-dependent rule primitives only as needed by tested cases
     - [ ] Model multi-phase actions, projectiles, channels, duration, periodic effects, and interruption without mechanic-specific special cases where possible
     - [ ] Keep runtime state representation separate from higher-level design interpretation
-
-  - [ ] Validation corpus
-    - [ ] Heroes and ordinary units
-    - [ ] Items, inventories, ownership, and dropped items
-    - [ ] Abilities and owner-bound runtime state
-    - [ ] Modifiers, auras, and stateful relations
-    - [ ] Projectiles and other short-lived spatial objects
-    - [ ] Buildings, trees, terrain, spatial fields, and global world state
-    - [ ] Combat, progression, economy, vision, and other system-level cases
-    - [ ] Use deliberately different and difficult counterexamples to force model revision
 
   - [ ] Higher-level design analysis built on the data model
     - [ ] Capability and action-space change
