@@ -18,6 +18,7 @@ Indentation expresses the relationship between larger questions and their subque
   - [x] Use GitHub as the durable source of truth
   - [x] Use a mutable indented roadmap as both research map and progress record
   - [x] Require explicit user approval before every repository mutation
+  - [x] Use Web Local Development for approved changes: public GitHub baseline -> local artifact apply/validation -> separate commit/push -> public GitHub verification
   - [x] Separate verified facts, analytical interpretations, and design-intent hypotheses
 
 - [ ] [ACTIVE] Build the high-level DOTAANALYSIS analysis framework

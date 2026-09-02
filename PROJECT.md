@@ -49,12 +49,18 @@ The repository should normally contain the project's **current best understandin
 
 ChatGPT sessions are temporary reasoning workspaces for discussion, disagreement, hypothesis formation, examples, counterexamples, research, and refinement.
 
-The GitHub repository is the durable project checkpoint. Because sessions are sequential, the repository must always contain enough structure and state for a fresh session to reconstruct the ongoing research without depending on the previous chat transcript.
+The public GitHub repository is the durable project checkpoint and the authoritative published state. Because sessions are sequential, the repository must always contain enough structure and state for a fresh session to reconstruct the ongoing research without depending on the previous chat transcript.
 
 `ROADMAP.md` is both the research map and the progress record. `docs/INDEX.md` is the map to durable research knowledge.
 
-## Repository control
+## Repository control and publication model
 
 The user retains final control over all durable project changes.
 
 Repository reads and analysis may be performed as needed. Any repository mutation requires explicit user approval for the specific proposed change before it is performed. Discussion alone never authorizes persistence.
+
+Approved repository changes use the Web Local Development workflow by default. Public GitHub is the durable read baseline and published source of truth; the user's local checkout is the controlled write workspace. Candidate files are delivered as complete artifacts, applied and validated locally, then committed and pushed in a separate publication step.
+
+Once an assistant-directed local apply succeeds, that local checkout is the session-local working state for the approved change. After the user pushes, the public GitHub repository must be re-read and verified before the mutation is considered complete and the published repository becomes the new durable baseline.
+
+Direct GitHub write operations are not a substitute for this local workflow unless the user explicitly changes that rule.
