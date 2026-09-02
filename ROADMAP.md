@@ -30,50 +30,56 @@ Indentation expresses the relationship between larger questions and their subque
 
   - [ ] [OPEN] Build an observed structure inventory before further abstraction
     - [x] Adopt the research rhythm: Observe -> Record -> Normalize -> Compare -> Abstract -> Pressure-test
-    - [x] Freeze current Object / Relation / Property / Contribution ideas as working hypotheses during the initial observation pass
-    - [ ] First observation batch
-      - [ ] Hero
+    - [x] Freeze the pre-checkpoint Object / Relation / Property / Contribution ideas while the first observation batch was collected
+    - [x] First observation batch
+      - [x] Hero
         - [x] Record definition-facing structure
-        - [ ] Record runtime-visible structure
-        - [ ] Record relationships and linked structures
-      - [ ] Ordinary units / creeps
-      - [ ] Buildings
-      - [ ] Abilities
-      - [ ] Items
-    - [ ] First abstraction checkpoint after the first observation batch
-      - [ ] Normalize repeated field and relationship names
-      - [ ] Build cross-subject structure matrices
-      - [ ] Revise the gameplay data model only from repeated observed patterns
+        - [x] Record runtime-visible structure
+        - [x] Record relationships and linked structures
+      - [x] Ordinary units / creeps, including regular neutral creeps and Roshan / Tormentor boundary variants
+      - [x] Buildings
+      - [x] Abilities
+      - [x] Items
+    - [x] First abstraction checkpoint after the first observation batch
+      - [x] Normalize repeated field and relationship names at first-pass granularity
+      - [x] Build a cross-subject structure matrix
+      - [x] Revise the gameplay data model only from repeated observed patterns
     - [ ] Second observation batch
       - [ ] Modifiers / buffs / debuffs
       - [ ] Projectiles and other short-lived spatial objects
       - [ ] World objects such as trees, wards, runes, and similar discrete objects
-      - [ ] World state such as terrain, vision, time, and spatial fields
+      - [ ] World state such as terrain, vision, time, and spatial structures
       - [ ] Player, Team, and Match-level structures
     - [ ] Second abstraction checkpoint
-      - [ ] Re-test Object / Relation / Property / Contribution hypotheses
+      - [ ] Re-test RuntimeInstance / RelationInstance / WorldState and unresolved Subobject hypotheses
+      - [ ] Re-test Property input/resolution and PropertyContribution hypotheses
       - [ ] Add new primitives only when repeated observations require them
 
-  - [ ] [OPEN] World and runtime object model - working hypothesis, frozen during initial observation batch
+  - [ ] [OPEN] World and runtime model - first-checkpoint working hypothesis
     - [x] Distinguish definition data from runtime instances
-    - [x] Use Object, Relation, and WorldState as the current top-level runtime categories
+    - [x] Use RuntimeInstance, RelationInstance, and WorldState as the current top-level runtime working categories
+    - [x] Add DefinitionLink as a provisional definition-layer structure after repeated cross-subject evidence
     - [x] Treat environment as a human-facing concept rather than a single formal data category
-    - [ ] Resolve the boundary between independent Object and owner-bound Subobject
-    - [ ] Resolve representative boundary cases: Ability, Modifier, Item, Projectile, Tree, and similar objects
+    - [ ] Determine whether owner-bound SubobjectInstance needs to remain a distinct primitive
+    - [ ] Resolve representative boundary cases across Ability, Modifier, Item, Projectile, Tree, and similar structures
     - [ ] Determine which relationships need stored runtime identity/state versus being derived from other state
+    - [ ] Resolve the shape of spatial world data: fields, regions, geometry, graphs, discrete objects, or combinations
+    - [ ] Determine how runtime truth differs from player/team-visible information
 
-  - [ ] [OPEN] Property model - working hypothesis, frozen during initial observation batch
+  - [ ] [OPEN] Property model - first-checkpoint working hypothesis
     - [x] Treat Property as a value query rather than assuming every property is a stored field
-    - [x] Distinguish definition values, stored runtime values, derived values, and aggregate values as the current working sources
-    - [x] Represent external property influence provisionally as Contribution rather than mutating base definition data
+    - [x] Separate value-input origin from value-resolution strategy
+    - [x] Admit DefinitionData, InstanceState, RelationState, and WorldState as provisional property inputs
+    - [x] Distinguish Direct, Derived, and Aggregate as provisional resolution strategies
+    - [x] Restrict PropertyContribution to a candidate mechanism for Aggregate properties rather than a universal external-effect model
     - [x] Distinguish current runtime values from maximum/capacity/parameter values
-    - [ ] Determine the minimal Property schema shared across representative object types
-    - [ ] Determine how aggregate property resolution should represent add, multiply, override, ordering, and stacking
+    - [ ] Determine the minimal Property schema shared across representative runtime structures
+    - [ ] Determine how aggregate resolution should represent add, multiply, override, ordering, and stacking
     - [ ] Determine how property dependencies form and are evaluated
-    - [ ] Determine Contribution activation, targeting, lifetime, and removal semantics
+    - [ ] Determine PropertyContribution activation, targeting, lifetime, and removal semantics
 
   - [ ] Interaction model
-    - [ ] Define a neutral representation of interactions between runtime objects and world state
+    - [ ] Define a neutral representation of interactions between runtime instances and world state
     - [ ] Determine how source, target selection, conditions, effects, and state/relation changes compose
     - [ ] Test whether attacks, abilities, items, auras, and environmental interactions can share the same primitives
 

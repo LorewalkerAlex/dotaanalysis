@@ -6,11 +6,11 @@ Only documents that actually exist should be listed here. Add sections or reorga
 
 ## Frameworks
 
-- [`frameworks/gameplay-data-model.md`](frameworks/gameplay-data-model.md) - `[OPEN]` working hypotheses for the reusable gameplay data model being derived from Dota 2. The current abstractions are intentionally frozen while the initial observed-structure inventory is built.
+- [`frameworks/gameplay-data-model.md`](frameworks/gameplay-data-model.md) - `[OPEN]` first-abstraction-checkpoint working model derived from the completed Hero / Creep / Building / Ability / Item observation batch. The next pressure-test corpus begins with modifiers / buffs / debuffs.
 
 ## Research datasets
 
-- [`research/observed-structure-catalog.md`](research/observed-structure-catalog.md) - `[OPEN]` observation-first catalog of visible Dota 2 gameplay structures. This is the current primary evidence document for the active research node.
+- [`research/observed-structure-catalog.md`](research/observed-structure-catalog.md) - `[OPEN]` observation-first catalog of visible Dota 2 gameplay structures. The first observation batch and first cross-subject comparison are recorded; the second batch is next.
 
 ## Design patterns and cross-cutting concepts
 
