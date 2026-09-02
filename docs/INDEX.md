@@ -6,11 +6,11 @@ Only documents that actually exist should be listed here. Add sections or reorga
 
 ## Frameworks
 
-No durable framework documents yet. The first active research phase is building the high-level analysis framework defined in `ROADMAP.md`.
+- [`frameworks/gameplay-data-model.md`](frameworks/gameplay-data-model.md) — `[OPEN]` working model for the reusable gameplay data model currently being derived from Dota 2. Defines the current structural baseline, modeling principles, unresolved questions, and next research step.
 
 ## Design patterns and cross-cutting concepts
 
-No durable pattern documents yet.
+No durable pattern documents yet. Higher-level design concepts such as capability, counterplay, strengths/weaknesses, and identity are intentionally deferred until the structural gameplay data model is more stable.
 
 ## Heroes
 

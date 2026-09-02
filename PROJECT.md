@@ -4,28 +4,32 @@
 
 DOTAANALYSIS is a long-running game-design research project that studies Dota 2 in order to extract reusable design insight.
 
-The goal is not to build a Dota 2 strategy guide, encyclopedia, tier list, or balance commentary archive. The goal is to understand how Dota 2 uses rules, numbers, constraints, interactions, timing, space, information, and asymmetry to create meaningful gameplay, then turn that understanding into design knowledge that can transfer to other games.
+The goal is not to build a Dota 2 strategy guide, encyclopedia, tier list, or balance commentary archive. The goal is to understand how Dota 2 represents and combines gameplay objects, properties, relationships, interactions, rules, numbers, timing, space, information, and asymmetry, then turn that understanding into models and design knowledge that can transfer to other games.
 
-## Main research areas
+The current first-stage goal is to derive a reusable **gameplay data model** from Dota 2: a small set of general structures that can describe representative heroes, items, abilities, modifiers, projectiles, map state, and other gameplay systems without creating a special model for every mechanic. This is a research model for transfer and comparison, not a claim about Valve's internal implementation architecture.
 
-The project currently has three broad research areas:
+## Research corpus
+
+The project currently draws evidence from three broad content areas:
 
 1. **Hero design** — attributes, growth, movement, attack behavior, cast behavior, skills, timings, ranges, animation-related parameters, strengths, weaknesses, identity, kit structure, and other hero-specific design.
 2. **Item design** — numerical value, active and passive capabilities, build paths, timing, slot pressure, opportunity cost, hero interaction, counterplay, and how items change a hero's available actions.
 3. **System design** — combat math, status and control rules, map and terrain, vision and information, economy, experience, lanes, objectives, time, pacing, environment, and other underlying systems.
 
-These areas are starting points, not permanent taxonomy. The roadmap and knowledge structure may be reorganized when research produces a better model.
+These areas are evidence domains and validation corpora, not necessarily separate top-level data models. The project should prefer shared primitives and composition when one model can explain multiple domains. The roadmap and knowledge structure may be reorganized when research produces a better model.
 
 ## Research direction
 
 The intended progression is broadly:
 
-1. Build high-level analysis frameworks.
-2. Test and refine those frameworks with representative cases and counterexamples.
-3. Use the refined frameworks to analyze individual heroes, items, and systems systematically.
-4. Compare cases across the corpus and revise earlier frameworks when they stop explaining the evidence well.
+1. Build a working gameplay data model at a structural level before interpreting design quality.
+2. Pressure-test and revise the model using deliberately different Dota 2 cases, especially boundary cases that challenge the current abstractions.
+3. Extend the model from world/object structure into properties, interactions, rules, and execution only when the existing layer requires it.
+4. Use heroes, items, abilities, modifiers, projectiles, map state, and systems as validation evidence rather than assuming each requires a separate framework.
+5. Build higher-level design analysis on top of the structural model, including decisions, counterplay, strengths, weaknesses, identity, and other reusable design concepts.
+6. Compare cases across the corpus and revise earlier models when they stop explaining the evidence well.
 
-The project therefore moves from framework to case study and back again. Individual analyses are evidence for improving the larger model, not isolated articles.
+The project therefore moves from model to case study and back again. Individual analyses are evidence for improving the larger model, not isolated articles.
 
 ## Evidence and claim types
 
