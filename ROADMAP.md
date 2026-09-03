@@ -37,68 +37,164 @@ Indentation expresses the relationship between larger questions and their subque
     - [x] Organize meaningful historical mechanics as design branches rather than patch chronology
     - [x] Preserve removed abilities, Innates, Facets, Shards, Scepters, or talents when they represent distinct design solutions
     - [x] Keep detailed equipment analysis out of the hero case unless inseparable from understanding the hero
-  - [x] Complete Axe as the first representative hero case
-    - [x] Record current combat chassis and key progression values
-    - [x] Record Berserker's Call design branches
-    - [x] Record Battle Hunger design branches
-    - [x] Record Counter Helix design branches
-    - [x] Record Culling Blade design branches
-    - [x] Record One Man Army and removed Coat of Blood
-    - [x] Preserve compact kit relationships and candidate lessons
-  - [x] Complete Juggernaut as the second contrasting hero case
-    - [x] Record current combat chassis and key progression values
-    - [x] Record Bladeform and removed Duelist
-    - [x] Record Blade Fury integration branches
-    - [x] Record Healing Ward branches
-    - [x] Record Blade Dance progression branches
-    - [x] Record old and current Omnislash models plus Swiftslash
-    - [x] Preserve compact kit relationships and candidate lessons
-  - [ ] Build a deliberately varied initial hero cohort
-    - [x] Complete Puck as the third contrasting hero case
-      - [x] Record current ranged Intelligence combat chassis and key progression values
-      - [x] Record Puckish avoidance-resource branches
-      - [x] Record Illusory Orb and Ethereal Jaunt route-design branches
-      - [x] Record Waning Rift access, displacement, and removed Jostling Rift branches
-      - [x] Record Phase Shift active-avoidance and attack-integration branches
-      - [x] Record Dream Coil spatial-control and Aghanim upgrade branches
-      - [x] Preserve compact kit relationships and candidate lessons
-    - [x] Complete Crystal Maiden as the fourth contrasting hero case
-      - [x] Record current fragile ranged Intelligence combat chassis and key progression values
-      - [x] Record Glacial Guard and removed Blueheart Floe resource-defense branches
-      - [x] Record Crystal Nova targeting and removed Glacial Guard facet branches
-      - [x] Record Frostbite PvE and historical self-Frostbite branches
-      - [x] Record Arcane Aura global, proximity, cast-triggered, and removed facet resource models
-      - [x] Record Freezing Field control, survival, action-freedom, and Scepter branches
-      - [x] Record Crystal Clone fixed-retreat and directional-reposition branches
-      - [x] Preserve compact kit relationships and candidate lessons
-    - [x] Complete Storm Spirit as the fifth contrasting hero case
-      - [x] Record current ranged Intelligence combat chassis and zero-base-mana-regeneration baseline
-      - [x] Record Galvanized permanent/held regeneration growth and historical milestone branches
-      - [x] Record Static Remnant stationary, Static Slide, and current mobile-placement branches
-      - [x] Record Electric Vortex self-commitment, Scepter area-control, and removed Shock Collar branches
-      - [x] Record attack-count and spell-triggered Overload models plus Electric Rave/Shard integration
-      - [x] Record Lightning Grapple and Ball Lightning mobility/cost-model branches
-      - [x] Preserve the 6.58 whole-kit rework as a meaningful design boundary
-      - [x] Preserve compact kit relationships and candidate lessons
-    - [x] Complete Chen as the sixth contrasting hero case
-      - [x] Record current ranged Intelligence combat chassis and current 7.41e reference state
-      - [x] Record Holy Persuasion external capability acquisition, access progression, roster pressure, and Shard Ancient/ability-level branches
-      - [x] Record representative borrowed neutral capabilities without turning the hero case into a neutral-creep encyclopedia
-      - [x] Record Zealot, removed Summon Convert, army-recall, and Martyrdom ownership branches
-      - [x] Record Penitence universal-amplification, focus-fire, and historical attack-access branches
-      - [x] Record Test of Faith -> Divine Favor sustain/protection and historical logistics branches
-      - [x] Record Persuaded-unit Martyrdom and current Hand of God Scepter protection-zone branches
-      - [x] Preserve compact kit relationships and candidate lessons
-    - [ ] Select a seventh hero that adds a further contrast, preferably an illusion/clone, transformation, spell-composition, or other capability model not yet represented in the cohort
-    - [ ] Include heroes with meaningfully different ranges, durability, mobility, resource models, timing curves, control models, and combat roles
-    - [ ] Prefer contrast over alphabetical or popularity-based ordering
-    - [ ] Continue using one hero per durable document with reusable numerical facts and design branches
-  - [ ] Run the first cross-hero synthesis after a small varied cohort is available
-    - [ ] Compare baseline attributes and combat chassis
-    - [ ] Compare growth curves and power timing
-    - [ ] Compare how abilities connect to or reject public combat systems such as attacks, damage, status, and movement
-    - [ ] Compare reliability, commitment, opportunity cost, and counterplay
-    - [ ] Identify candidate design principles that survive multiple contrasting heroes
+  - [x] Define the default per-hero analysis sequence
+    1. Verify the current combat chassis and reusable progression baseline.
+    2. Identify the hero's defining mechanic or design problem before mechanically walking Q/W/E/R.
+    3. Follow the causal relationships among abilities and other mechanics in the order that best explains the kit.
+    4. Preserve historically meaningful design branches rather than patch chronology.
+    5. Record Innate, Facet, Talent, Shard, Scepter, and other progression branches when they change magnitude, frequency, reliability, access, coverage, commitment, or action space.
+    6. Reconstruct whole-kit behavior across lane, farming, skirmishing, team fights, pursuit, retreat, positioning, target selection, and resource loops where relevant.
+    7. Identify costs, failure modes, opportunity costs, commitment, and opponent counterplay.
+    8. Close with a compact design identity, core mechanical relationships, main costs/counterplay, case-level candidate lessons, and unresolved comparison questions.
+  - [ ] Complete one durable first pass for every playable hero
+    - [x] Use Dota's default hero-grid ordering rather than research-defined design groups: Strength -> Agility -> Intelligence -> Universal, alphabetical within each group
+    - [x] Treat the current ordering as an operational roster snapshot, not a design classification; as the live roster changes, insert new heroes alphabetically and move heroes if their attribute group changes
+    - [ ] Strength heroes (36)
+      - [ ] Alchemist
+      - [x] Axe - `docs/heroes/axe.md`
+      - [ ] Bristleback
+      - [ ] Centaur Warrunner
+      - [ ] Chaos Knight
+      - [ ] Clockwerk
+      - [ ] Dawnbreaker
+      - [ ] Doom
+      - [ ] Dragon Knight
+      - [ ] Earth Spirit
+      - [ ] Earthshaker
+      - [ ] Elder Titan
+      - [ ] Huskar
+      - [ ] Kunkka
+      - [ ] Largo
+      - [ ] Legion Commander
+      - [ ] Lifestealer
+      - [ ] Lycan
+      - [ ] Mars
+      - [ ] Night Stalker
+      - [ ] Ogre Magi
+      - [ ] Omniknight
+      - [ ] Phoenix
+      - [ ] Primal Beast
+      - [ ] Pudge
+      - [ ] Slardar
+      - [ ] Spirit Breaker
+      - [ ] Sven
+      - [ ] Tidehunter
+      - [ ] Timbersaw
+      - [ ] Tiny
+      - [ ] Treant Protector
+      - [ ] Tusk
+      - [ ] Underlord
+      - [ ] Undying
+      - [ ] Wraith King
+    - [ ] Agility heroes (35)
+      - [ ] Anti-Mage
+      - [ ] Bloodseeker
+      - [ ] Bounty Hunter
+      - [ ] Broodmother
+      - [ ] Clinkz
+      - [ ] Drow Ranger
+      - [ ] Ember Spirit
+      - [ ] Faceless Void
+      - [ ] Gyrocopter
+      - [ ] Hoodwink
+      - [x] Juggernaut - `docs/heroes/juggernaut.md`
+      - [ ] Kez
+      - [ ] Lone Druid
+      - [ ] Luna
+      - [ ] Medusa
+      - [ ] Meepo
+      - [ ] Mirana
+      - [ ] Monkey King
+      - [ ] Morphling
+      - [ ] Naga Siren
+      - [ ] Phantom Assassin
+      - [ ] Phantom Lancer
+      - [ ] Razor
+      - [ ] Riki
+      - [ ] Shadow Fiend
+      - [ ] Slark
+      - [ ] Sniper
+      - [ ] Spectre
+      - [ ] Templar Assassin
+      - [ ] Terrorblade
+      - [ ] Troll Warlord
+      - [ ] Ursa
+      - [ ] Vengeful Spirit
+      - [ ] Viper
+      - [ ] Weaver
+    - [ ] Intelligence heroes (34)
+      - [ ] Ancient Apparition
+      - [x] Chen - `docs/heroes/chen.md`
+      - [x] Crystal Maiden - `docs/heroes/crystal-maiden.md`
+      - [ ] Dark Seer
+      - [ ] Dark Willow
+      - [ ] Disruptor
+      - [ ] Enchantress
+      - [ ] Grimstroke
+      - [ ] Invoker
+      - [ ] Jakiro
+      - [ ] Keeper of the Light
+      - [ ] Leshrac
+      - [ ] Lich
+      - [ ] Lina
+      - [ ] Lion
+      - [ ] Muerta
+      - [ ] Necrophos
+      - [ ] Oracle
+      - [ ] Outworld Destroyer
+      - [x] Puck - `docs/heroes/puck.md`
+      - [ ] Pugna
+      - [ ] Queen of Pain
+      - [ ] Ringmaster
+      - [ ] Rubick
+      - [ ] Shadow Demon
+      - [ ] Shadow Shaman
+      - [ ] Silencer
+      - [ ] Skywrath Mage
+      - [x] Storm Spirit - `docs/heroes/storm-spirit.md`
+      - [ ] Tinker
+      - [ ] Warlock
+      - [ ] Winter Wyvern
+      - [ ] Witch Doctor
+      - [ ] Zeus
+    - [ ] Universal heroes (22)
+      - [ ] Abaddon
+      - [ ] Arc Warden
+      - [ ] Bane
+      - [ ] Batrider
+      - [ ] Beastmaster
+      - [ ] Brewmaster
+      - [ ] Dazzle
+      - [ ] Death Prophet
+      - [ ] Enigma
+      - [ ] Io
+      - [ ] Magnus
+      - [ ] Marci
+      - [ ] Nature's Prophet
+      - [ ] Nyx Assassin
+      - [ ] Pangolier
+      - [ ] Sand King
+      - [ ] Snapfire
+      - [ ] Techies
+      - [ ] Venomancer
+      - [ ] Visage
+      - [ ] Void Spirit
+      - [ ] Windranger
+  - [ ] Refresh the factual baseline for roster-wide comparison after every hero has a first durable pass
+    - [ ] Confirm the then-current playable roster and attribute grouping
+    - [ ] Refresh materially stale current mechanics and comparison-critical numbers in older hero cases
+    - [ ] Record one shared comparison reference patch/version for the synthesis pass
+  - [ ] Run full cross-hero synthesis after roster-wide first-pass coverage and factual refresh
+    - [ ] Compare baseline attributes, combat chassis, ranges, mobility, durability, and timing commitments
+    - [ ] Compare growth curves, resource models, permanent progression, access progression, and power timing
+    - [ ] Compare how heroes construct action space through fixed abilities, attacks, movement, units, transformations, borrowed capabilities, and upgrades
+    - [ ] Compare how abilities connect to or reject public combat systems such as attacks, damage, status, movement, death, healing, and unit control
+    - [ ] Compare spatial access, positioning requirements, engagement depth, escape, formation, and other commitment structures
+    - [ ] Compare reliability, flexibility, execution burden, uncertainty, opportunity cost, and failure modes
+    - [ ] Compare opponent counterplay and which weaknesses are deliberately left unsolved inside the hero kit
+    - [ ] Compare where power is allocated across magnitude, access, reliability, timing, space, cost, flexibility, and counterplay
+    - [ ] Identify candidate principles, then actively test them against counterexamples across the full roster
+    - [ ] Produce a gap map of questions that remain unresolved after roster-wide comparison
 
 - [ ] [OPEN] Equipment and item design case studies
   - [ ] Study representative stat-focused equipment
@@ -165,4 +261,4 @@ Indentation expresses the relationship between larger questions and their subque
 
 ## Current next action
 
-Select and study a seventh hero that adds a further contrast to Axe, Juggernaut, Puck, Crystal Maiden, Storm Spirit, and Chen. Prefer a capability model not yet represented strongly in the cohort - for example illusion/clone management, transformation, spell composition, or another unusual progression/resource structure. Build the case as one fact-rich durable hero document, preserve meaningful historical design branches, keep analysis compact, and continue deferring cross-hero synthesis until the deliberately varied initial cohort is ready for comparison.
+Study Alchemist, the first unfinished hero in the current Strength-group alphabetical order. Use the standard per-hero analysis sequence: verify the current chassis, identify the defining mechanic, follow causal kit relationships, preserve meaningful historical branches and progression upgrades, reconstruct whole-kit behavior, identify costs and counterplay, then close with compact case-level lessons. After Alchemist is durably recorded, continue to the next unfinished hero in the default attribute-group/alphabetical checklist, skipping heroes whose durable first pass is already complete.
