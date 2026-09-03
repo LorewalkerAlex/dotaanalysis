@@ -1,6 +1,6 @@
 # DOTAANALYSIS Research Roadmap
 
-This file is both the research map and the project progress record. It is expected to evolve as the research develops.
+This file is both the research map and the project progress record. It is expected to evolve as concrete design research changes what is worth studying next.
 
 ## Status convention
 
@@ -21,86 +21,98 @@ Indentation expresses the relationship between larger questions and their subque
   - [x] Use Web Local Development for approved changes: public GitHub baseline -> local artifact apply/validation -> separate commit/push -> public GitHub verification
   - [x] Separate verified facts, analytical interpretations, and design-intent hypotheses
 
-- [ ] [ACTIVE] Build a reusable gameplay data model
-  - [x] Establish the current modeling direction
-    - [x] Treat Dota 2 as evidence for a transferable gameplay data model rather than as three unrelated Hero / Item / System frameworks
-    - [x] Model structure before higher-level design interpretation
-    - [x] Prefer general composable primitives over mechanic-specific special cases
-    - [x] Distinguish the research model from claims about Dota 2's internal implementation architecture
+- [x] Reset the research direction from structure-first abstraction to case-first design analysis
+  - [x] Treat concrete Dota 2 designs as the primary research units
+  - [x] Make reusable design insight, not ontology completeness, the main research output
+  - [x] Preserve only the factual detail needed to support design reasoning
+  - [x] Require case conclusions to connect design choices to behavior, decisions, trade-offs, counterplay, or pacing
+  - [x] Derive cross-case concepts only after repeated evidence supports them
+  - [x] Establish the case-analysis method in `docs/methods/design-case-analysis.md`
 
-  - [ ] [OPEN] Build an observed structure inventory before further abstraction
-    - [x] Adopt the research rhythm: Observe -> Record -> Normalize -> Compare -> Abstract -> Pressure-test
-    - [x] Freeze the pre-checkpoint Object / Relation / Property / Contribution ideas while the first observation batch was collected
-    - [x] First observation batch
-      - [x] Hero
-        - [x] Record definition-facing structure
-        - [x] Record runtime-visible structure
-        - [x] Record relationships and linked structures
-      - [x] Ordinary units / creeps, including regular neutral creeps and Roshan / Tormentor boundary variants
-      - [x] Buildings
-      - [x] Abilities
-      - [x] Items
-    - [x] First abstraction checkpoint after the first observation batch
-      - [x] Normalize repeated field and relationship names at first-pass granularity
-      - [x] Build a cross-subject structure matrix
-      - [x] Revise the gameplay data model only from repeated observed patterns
-    - [ ] Second observation batch
-      - [ ] Modifiers / buffs / debuffs
-      - [ ] Projectiles and other short-lived spatial objects
-      - [ ] World objects such as trees, wards, runes, and similar discrete objects
-      - [ ] World state such as terrain, vision, time, and spatial structures
-      - [ ] Player, Team, and Match-level structures
-    - [ ] Second abstraction checkpoint
-      - [ ] Re-test RuntimeInstance / RelationInstance / WorldState and unresolved Subobject hypotheses
-      - [ ] Re-test Property input/resolution and PropertyContribution hypotheses
-      - [ ] Add new primitives only when repeated observations require them
+- [ ] [ACTIVE] Hero design case studies
+  - [ ] Select and complete the first representative hero case
+    - [ ] Verify the current hero facts and version context needed by the analysis
+    - [ ] Analyze baseline attributes and combat chassis
+    - [ ] Analyze growth and progression
+    - [ ] Analyze each ability as an individual design
+    - [ ] Analyze the ability kit as a combined capability set
+    - [ ] Analyze the behavior the full design encourages
+    - [ ] Analyze strengths, weaknesses, reliability, commitment, and counterplay
+    - [ ] Record item dependencies or item-enabled behavior where they materially shape the hero
+    - [ ] Extract transferable design lessons and explicit uncertainties
+  - [ ] Build a deliberately varied initial hero cohort
+    - [ ] Include heroes with meaningfully different ranges, durability, mobility, resource models, timing curves, and combat roles
+    - [ ] Prefer contrast over alphabetical or popularity-based ordering
+  - [ ] Run the first cross-hero synthesis after a small varied cohort is available
+    - [ ] Compare how baseline attributes create behavior before abilities are considered
+    - [ ] Compare growth curves and power timing
+    - [ ] Compare capability allocation across ability kits
+    - [ ] Compare reliability, commitment, opportunity cost, and counterplay
+    - [ ] Identify candidate design principles that survive multiple heroes
 
-  - [ ] [OPEN] World and runtime model - first-checkpoint working hypothesis
-    - [x] Distinguish definition data from runtime instances
-    - [x] Use RuntimeInstance, RelationInstance, and WorldState as the current top-level runtime working categories
-    - [x] Add DefinitionLink as a provisional definition-layer structure after repeated cross-subject evidence
-    - [x] Treat environment as a human-facing concept rather than a single formal data category
-    - [ ] Determine whether owner-bound SubobjectInstance needs to remain a distinct primitive
-    - [ ] Resolve representative boundary cases across Ability, Modifier, Item, Projectile, Tree, and similar structures
-    - [ ] Determine which relationships need stored runtime identity/state versus being derived from other state
-    - [ ] Resolve the shape of spatial world data: fields, regions, geometry, graphs, discrete objects, or combinations
-    - [ ] Determine how runtime truth differs from player/team-visible information
+- [ ] [OPEN] Equipment and item design case studies
+  - [ ] Study representative stat-focused equipment
+  - [ ] Study representative active capability items
+  - [ ] Study defensive and counterplay items
+  - [ ] Study mobility and positioning items
+  - [ ] Study consumables and limited-charge tools
+  - [ ] Study neutral items and other nonstandard acquisition models
+  - [ ] Compare price, timing, build path, slot pressure, activation constraints, and hero interaction
+  - [ ] Extract reusable principles about equipment changing action space and strategic options
 
-  - [ ] [OPEN] Property model - first-checkpoint working hypothesis
-    - [x] Treat Property as a value query rather than assuming every property is a stored field
-    - [x] Separate value-input origin from value-resolution strategy
-    - [x] Admit DefinitionData, InstanceState, RelationState, and WorldState as provisional property inputs
-    - [x] Distinguish Direct, Derived, and Aggregate as provisional resolution strategies
-    - [x] Restrict PropertyContribution to a candidate mechanism for Aggregate properties rather than a universal external-effect model
-    - [x] Distinguish current runtime values from maximum/capacity/parameter values
-    - [ ] Determine the minimal Property schema shared across representative runtime structures
-    - [ ] Determine how aggregate resolution should represent add, multiply, override, ordering, and stacking
-    - [ ] Determine how property dependencies form and are evaluated
-    - [ ] Determine PropertyContribution activation, targeting, lifetime, and removal semantics
+- [ ] [OPEN] Lane, creep, neutral, building, and objective design
+  - [ ] Lane wave composition and spawn rhythm
+  - [ ] Creep aggro and lane equilibrium
+  - [ ] Gold and experience distribution around lane units
+  - [ ] Neutral camps, pulling, stacking, farming routes, and contestability
+  - [ ] Towers, barracks, base progression, and structural pressure
+  - [ ] Roshan and Tormentor as contested timing objectives
+  - [ ] Runes and other map-spawned resources
+  - [ ] Extract reusable principles about pressure, resource routing, objectives, and match pacing
 
-  - [ ] Interaction model
-    - [ ] Define a neutral representation of interactions between runtime instances and world state
-    - [ ] Determine how source, target selection, conditions, effects, and state/relation changes compose
-    - [ ] Test whether attacks, abilities, items, auras, and environmental interactions can share the same primitives
+- [ ] [OPEN] Economy and progression design
+  - [ ] Gold sources, loss, reliability, and spending decisions
+  - [ ] Experience distribution and level timing
+  - [ ] Death cost, respawn, and buyback
+  - [ ] Farming efficiency, acceleration, recovery, and comeback mechanisms
+  - [ ] Team versus individual resource allocation
+  - [ ] Extract reusable principles about pacing, snowball control, recovery, and opportunity cost
 
-  - [ ] Rule and execution model
-    - [ ] Define event, condition, transition, and time-dependent rule primitives only as needed by tested cases
-    - [ ] Model multi-phase actions, projectiles, channels, duration, periodic effects, and interruption without mechanic-specific special cases where possible
-    - [ ] Keep runtime state representation separate from higher-level design interpretation
+- [ ] [OPEN] Map, terrain, movement, and spatial design
+  - [ ] High ground, ramps, cliffs, trees, paths, and chokepoints
+  - [ ] River, lanes, jungle regions, bases, pits, and objective placement
+  - [ ] Mobility rules and traversal exceptions
+  - [ ] How geometry changes access, safety, commitment, pursuit, escape, and formation
+  - [ ] Extract reusable principles about spatial pressure and strategic geography
 
-  - [ ] Higher-level design analysis built on the data model
-    - [ ] Capability and action-space change
-    - [ ] Constraints, costs, reliability, and friction
-    - [ ] Decision space and trade-offs
-    - [ ] Interaction and counterplay
-    - [ ] Strength and weakness structure
-    - [ ] Identity and strategic function
-    - [ ] Strength allocation / power budget as an analytical model
-    - [ ] Spatial and temporal advantage
-    - [ ] Identify, rename, merge, or remove concepts as evidence demands
+- [ ] [OPEN] Vision and information design
+  - [ ] Day/night vision differences
+  - [ ] Fog of War and shared team information
+  - [ ] Observer and Sentry Wards, True Sight, and detection
+  - [ ] High-ground and terrain-based information asymmetry
+  - [ ] Scan, hidden timers, uncertain information, and information-gathering tools
+  - [ ] Extract reusable principles about uncertainty, scouting, risk, deception, and information cost
 
-- [ ] Systematic case analysis
-  - [ ] Individual heroes
-  - [ ] Individual items
-  - [ ] Individual systems and mechanics
-  - [ ] Cross-case comparisons that test and revise the gameplay data model and higher-level analysis
+- [ ] [OPEN] Combat, status, and systemic rule design
+  - [ ] Damage, armor, magic resistance, and mitigation
+  - [ ] Attack behavior, projectiles, range, timing, and animation commitments
+  - [ ] Stuns, slows, silence, break, dispel, immunity, and other status rules
+  - [ ] Regeneration, barriers, death, and survival systems
+  - [ ] Interaction rules that materially shape hero and item counterplay
+  - [ ] Extract reusable principles about reliability, response windows, commitment, and systemic counterplay
+
+- [ ] [OPEN] Cross-case design principles
+  - [ ] Maintain principles only when supported by multiple concrete cases
+  - [ ] Strength allocation and power budget across magnitude, access, reliability, timing, space, cost, and counterplay
+  - [ ] Capability and action-space expansion
+  - [ ] Constraints, friction, commitment, and opportunity cost
+  - [ ] Decision quality and meaningful trade-offs
+  - [ ] Counterplay as part of power design rather than an afterthought
+  - [ ] Information as a gameplay resource
+  - [ ] Identity emerging from aligned strengths, weaknesses, and behavior
+  - [ ] Spatial and temporal advantage
+  - [ ] Revise, split, merge, or discard principles when later cases contradict them
+
+## Current next action
+
+Begin the first Hero design case study. Choose a representative first hero deliberately for analytical clarity, then apply the case method in `docs/methods/design-case-analysis.md`. Do not create a new structural data model before the case produces an actual design question that requires one.
