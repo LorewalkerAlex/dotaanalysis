@@ -54,7 +54,42 @@ Indentation expresses the relationship between larger questions and their subque
     - [x] Record old and current Omnislash models plus Swiftslash
     - [x] Preserve compact kit relationships and candidate lessons
   - [ ] Build a deliberately varied initial hero cohort
-    - [ ] Select a third hero that contrasts materially with Axe and Juggernaut rather than another similar melee physical core
+    - [x] Complete Puck as the third contrasting hero case
+      - [x] Record current ranged Intelligence combat chassis and key progression values
+      - [x] Record Puckish avoidance-resource branches
+      - [x] Record Illusory Orb and Ethereal Jaunt route-design branches
+      - [x] Record Waning Rift access, displacement, and removed Jostling Rift branches
+      - [x] Record Phase Shift active-avoidance and attack-integration branches
+      - [x] Record Dream Coil spatial-control and Aghanim upgrade branches
+      - [x] Preserve compact kit relationships and candidate lessons
+    - [x] Complete Crystal Maiden as the fourth contrasting hero case
+      - [x] Record current fragile ranged Intelligence combat chassis and key progression values
+      - [x] Record Glacial Guard and removed Blueheart Floe resource-defense branches
+      - [x] Record Crystal Nova targeting and removed Glacial Guard facet branches
+      - [x] Record Frostbite PvE and historical self-Frostbite branches
+      - [x] Record Arcane Aura global, proximity, cast-triggered, and removed facet resource models
+      - [x] Record Freezing Field control, survival, action-freedom, and Scepter branches
+      - [x] Record Crystal Clone fixed-retreat and directional-reposition branches
+      - [x] Preserve compact kit relationships and candidate lessons
+    - [x] Complete Storm Spirit as the fifth contrasting hero case
+      - [x] Record current ranged Intelligence combat chassis and zero-base-mana-regeneration baseline
+      - [x] Record Galvanized permanent/held regeneration growth and historical milestone branches
+      - [x] Record Static Remnant stationary, Static Slide, and current mobile-placement branches
+      - [x] Record Electric Vortex self-commitment, Scepter area-control, and removed Shock Collar branches
+      - [x] Record attack-count and spell-triggered Overload models plus Electric Rave/Shard integration
+      - [x] Record Lightning Grapple and Ball Lightning mobility/cost-model branches
+      - [x] Preserve the 6.58 whole-kit rework as a meaningful design boundary
+      - [x] Preserve compact kit relationships and candidate lessons
+    - [x] Complete Chen as the sixth contrasting hero case
+      - [x] Record current ranged Intelligence combat chassis and current 7.41e reference state
+      - [x] Record Holy Persuasion external capability acquisition, access progression, roster pressure, and Shard Ancient/ability-level branches
+      - [x] Record representative borrowed neutral capabilities without turning the hero case into a neutral-creep encyclopedia
+      - [x] Record Zealot, removed Summon Convert, army-recall, and Martyrdom ownership branches
+      - [x] Record Penitence universal-amplification, focus-fire, and historical attack-access branches
+      - [x] Record Test of Faith -> Divine Favor sustain/protection and historical logistics branches
+      - [x] Record Persuaded-unit Martyrdom and current Hand of God Scepter protection-zone branches
+      - [x] Preserve compact kit relationships and candidate lessons
+    - [ ] Select a seventh hero that adds a further contrast, preferably an illusion/clone, transformation, spell-composition, or other capability model not yet represented in the cohort
     - [ ] Include heroes with meaningfully different ranges, durability, mobility, resource models, timing curves, control models, and combat roles
     - [ ] Prefer contrast over alphabetical or popularity-based ordering
     - [ ] Continue using one hero per durable document with reusable numerical facts and design branches
@@ -130,4 +165,4 @@ Indentation expresses the relationship between larger questions and their subque
 
 ## Current next action
 
-Select and study a third hero that deliberately contrasts with both Axe and Juggernaut. Prefer a case that expands the sample beyond melee physical combat - for example a ranged spellcaster, support/controller, summoner, or mobility-centric hero. Build the case as one fact-rich durable hero document, preserve meaningful historical design branches, keep analysis compact, and defer cross-hero synthesis until the cohort is more varied.
+Select and study a seventh hero that adds a further contrast to Axe, Juggernaut, Puck, Crystal Maiden, Storm Spirit, and Chen. Prefer a capability model not yet represented strongly in the cohort - for example illusion/clone management, transformation, spell composition, or another unusual progression/resource structure. Build the case as one fact-rich durable hero document, preserve meaningful historical design branches, keep analysis compact, and continue deferring cross-hero synthesis until the deliberately varied initial cohort is ready for comparison.
