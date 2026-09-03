@@ -23,32 +23,47 @@ Indentation expresses the relationship between larger questions and their subque
 
 - [x] Reset the research direction from structure-first abstraction to case-first design analysis
   - [x] Treat concrete Dota 2 designs as the primary research units
-  - [x] Make reusable design insight, not ontology completeness, the main research output
-  - [x] Preserve only the factual detail needed to support design reasoning
+  - [x] Make reusable design insight, not ontology completeness, the main research goal
+  - [x] Preserve reusable factual baselines and key design-branch values without turning the repository into a patch-by-patch balance archive
   - [x] Require case conclusions to connect design choices to behavior, decisions, trade-offs, counterplay, or pacing
   - [x] Derive cross-case concepts only after repeated evidence supports them
-  - [x] Establish the case-analysis method in `docs/methods/design-case-analysis.md`
+  - [x] Establish and calibrate the case-analysis method in `docs/methods/design-case-analysis.md`
 
 - [ ] [ACTIVE] Hero design case studies
-  - [ ] Select and complete the first representative hero case
-    - [ ] Verify the current hero facts and version context needed by the analysis
-    - [ ] Analyze baseline attributes and combat chassis
-    - [ ] Analyze growth and progression
-    - [ ] Analyze each ability as an individual design
-    - [ ] Analyze the ability kit as a combined capability set
-    - [ ] Analyze the behavior the full design encourages
-    - [ ] Analyze strengths, weaknesses, reliability, commitment, and counterplay
-    - [ ] Record item dependencies or item-enabled behavior where they materially shape the hero
-    - [ ] Extract transferable design lessons and explicit uncertainties
+  - [x] Establish the durable hero-case format
+    - [x] Use one durable document per hero
+    - [x] Make the case fact-rich and analysis-light
+    - [x] Preserve comparison-ready current baseline numbers
+    - [x] Organize meaningful historical mechanics as design branches rather than patch chronology
+    - [x] Preserve removed abilities, Innates, Facets, Shards, Scepters, or talents when they represent distinct design solutions
+    - [x] Keep detailed equipment analysis out of the hero case unless inseparable from understanding the hero
+  - [x] Complete Axe as the first representative hero case
+    - [x] Record current combat chassis and key progression values
+    - [x] Record Berserker's Call design branches
+    - [x] Record Battle Hunger design branches
+    - [x] Record Counter Helix design branches
+    - [x] Record Culling Blade design branches
+    - [x] Record One Man Army and removed Coat of Blood
+    - [x] Preserve compact kit relationships and candidate lessons
+  - [x] Complete Juggernaut as the second contrasting hero case
+    - [x] Record current combat chassis and key progression values
+    - [x] Record Bladeform and removed Duelist
+    - [x] Record Blade Fury integration branches
+    - [x] Record Healing Ward branches
+    - [x] Record Blade Dance progression branches
+    - [x] Record old and current Omnislash models plus Swiftslash
+    - [x] Preserve compact kit relationships and candidate lessons
   - [ ] Build a deliberately varied initial hero cohort
-    - [ ] Include heroes with meaningfully different ranges, durability, mobility, resource models, timing curves, and combat roles
+    - [ ] Select a third hero that contrasts materially with Axe and Juggernaut rather than another similar melee physical core
+    - [ ] Include heroes with meaningfully different ranges, durability, mobility, resource models, timing curves, control models, and combat roles
     - [ ] Prefer contrast over alphabetical or popularity-based ordering
+    - [ ] Continue using one hero per durable document with reusable numerical facts and design branches
   - [ ] Run the first cross-hero synthesis after a small varied cohort is available
-    - [ ] Compare how baseline attributes create behavior before abilities are considered
+    - [ ] Compare baseline attributes and combat chassis
     - [ ] Compare growth curves and power timing
-    - [ ] Compare capability allocation across ability kits
+    - [ ] Compare how abilities connect to or reject public combat systems such as attacks, damage, status, and movement
     - [ ] Compare reliability, commitment, opportunity cost, and counterplay
-    - [ ] Identify candidate design principles that survive multiple heroes
+    - [ ] Identify candidate design principles that survive multiple contrasting heroes
 
 - [ ] [OPEN] Equipment and item design case studies
   - [ ] Study representative stat-focused equipment
@@ -115,4 +130,4 @@ Indentation expresses the relationship between larger questions and their subque
 
 ## Current next action
 
-Begin the first Hero design case study. Choose a representative first hero deliberately for analytical clarity, then apply the case method in `docs/methods/design-case-analysis.md`. Do not create a new structural data model before the case produces an actual design question that requires one.
+Select and study a third hero that deliberately contrasts with both Axe and Juggernaut. Prefer a case that expands the sample beyond melee physical combat - for example a ranged spellcaster, support/controller, summoner, or mobility-centric hero. Build the case as one fact-rich durable hero document, preserve meaningful historical design branches, keep analysis compact, and defer cross-hero synthesis until the cohort is more varied.

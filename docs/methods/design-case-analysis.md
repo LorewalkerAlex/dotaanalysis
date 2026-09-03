@@ -2,13 +2,15 @@
 
 **Status:** Current working method
 
-This document defines how DOTAANALYSIS studies concrete Dota 2 designs in order to extract reusable game-design insight.
+This document defines how DOTAANALYSIS studies concrete Dota 2 designs and stores durable evidence for later comparison and reuse.
 
 The method is intentionally **case-first**. A hero, item, lane rule, neutral camp, objective, map feature, vision rule, or combat system is valuable because of the behavior and decisions it creates, not because it can be classified into a complete abstract schema.
 
 ## Core rule
 
-Every substantial case should move from facts to design consequences:
+Research discussion may be analysis-heavy, but the durable case record should normally be **fact-rich and analysis-light**.
+
+The working loop is:
 
 ```text
 Verified design facts
@@ -20,7 +22,7 @@ Verified design facts
     -> transferable design lessons
 ```
 
-If a research pass ends with only a parameter inventory, taxonomy, or data representation, it is incomplete.
+The repository should preserve enough verified facts and key numbers that later numerical analysis, comparison, or reinterpretation does not require re-querying basic information. It should not preserve every intermediate argument from the chat.
 
 ## Evidence discipline
 
@@ -30,222 +32,175 @@ Keep three claim types separate:
 - **Analytical interpretation** - what a verified design choice does to gameplay and decisions.
 - **Design-intent hypothesis** - a hypothesis about why a designer chose that solution.
 
-For current mechanics, numbers, patches, maps, heroes, items, or other changeable facts, record a source and relevant version/date context.
+For current mechanics, numbers, maps, heroes, items, or other changeable facts, record a source and enough patch/version context to identify the factual reference state.
 
-Do not infer implementation architecture from observable behavior.
+Historical evidence is organized by **design branch**, not by patch chronology. Version numbers and dates are supporting evidence only; they are not the primary structure of a case.
+
+Do not infer implementation architecture or designer intent from observable behavior alone.
+
+## What durable case files should preserve
+
+Durable case files should preferentially preserve:
+
+1. current baseline values that are likely to be compared later;
+2. the defining rules and key values of historically meaningful design branches;
+3. deleted abilities or upgrades when they represent a distinct design solution;
+4. important targeting, range, timing, cost, damage/heal, scaling, immunity, dispel, death, attack, and trigger rules;
+5. talent, innate, Shard, Scepter, or similar upgrades when they materially change a design branch;
+6. short analytical notes explaining why a branch is interesting;
+7. a compact whole-case identity and a few candidate lessons.
+
+Do **not** record every balance-only number change. A sequence such as `100 -> 105 -> 100` is normally noise unless the magnitude or relationship changed the ability's use. When a historical branch matters, record a representative or mature set of parameters sufficient to understand and compare the branch.
 
 ## General case workflow
 
-### 1. Define the design question
+### 1. Define the concrete case
 
-Start with the concrete case and ask what is worth explaining.
+Start with the hero, item, rule, map feature, or other concrete design being studied. Do not begin by deciding which abstract categories it must populate.
 
-Examples of useful questions:
+### 2. Capture the reusable factual baseline
 
-- Why does this hero want to fight at this distance?
-- Why is this powerful ability allowed to be so strong?
-- Why does this item change a hero's behavior rather than merely increase numbers?
-- Why does this lane rule create pressure or equilibrium?
-- Why does this terrain feature make one position valuable?
-- Why does this information rule create uncertainty rather than frustration?
+Collect the current values that are likely to matter for later numerical or mechanical comparison. This may include:
 
-Do not begin by deciding which abstract categories the case must populate.
+- attributes and growth;
+- health, mana, regeneration, armor, resistance;
+- movement and attack chassis;
+- range, area, cast point, attack point, BAT, projectile behavior;
+- damage, heal, threshold, duration, cooldown, cost;
+- trigger probability or trigger count;
+- targeting, dispel, immunity, death, attack, and status interactions;
+- upgrade values and progression rules.
 
-### 2. Establish the minimum factual baseline
+The goal is not encyclopedic completeness. The goal is to avoid repeatedly re-querying basic facts that are predictably useful to later design work.
 
-Collect the facts required to understand the design question. This may include numbers, timing, ranges, costs, targeting rules, progression, acquisition conditions, map placement, or historical changes.
+### 3. Identify design branches
 
-Be complete enough to support the analysis, but avoid turning the case into an encyclopedia entry.
+For each important ability or system, identify the distinct designs that have actually existed.
 
-### 3. Explain behavior
+A **design branch** is a materially different solution, such as:
 
-Translate the rules into what players actually tend or are incentivized to do.
+- random proc versus deterministic accumulation;
+- fixed spell damage versus attack-speed-scaled spell damage;
+- a special state that excludes normal attacks versus one that reintegrates attacks;
+- a single-target effect versus an area effect;
+- an ordinary damage rule versus an alternate death rule;
+- an upgrade that increases magnitude versus one that adds a new action pattern.
 
-Useful dimensions include:
+Do not structure the case as a patch timeline. Record the branch, its defining rules and key numbers, and whether it is current or historical/removed.
 
-- preferred distance and positioning;
-- target selection;
-- initiation, pursuit, retreat, protection, farming, pushing, or scouting behavior;
-- resource spending and conservation;
-- timing windows;
-- risk exposure and commitment;
-- dependence on teammates, enemies, terrain, vision, or items;
-- how behavior changes when the case is ahead, behind, safe, threatened, or missing key resources.
+### 4. Preserve deleted designs when they are informative
 
-Behavior is the bridge between raw mechanics and design insight.
+A removed ability, facet, innate, Shard, Scepter effect, or other mechanic remains part of the research corpus if it was a meaningful design solution.
 
-### 4. Identify strength allocation
+If a removed mechanic later reappears in another upgrade slot or ability, record that relationship as a design connection rather than as a chronological patch log.
 
-Do not reduce power to damage or durability. Ask where the design places strength and where it withholds it.
+### 5. Keep analysis compact
 
-Candidate dimensions include:
+For each branch, a short note should normally be enough to capture:
 
-- magnitude;
-- capability - what becomes possible;
-- access conditions;
-- frequency and uptime;
-- resource cost;
-- reliability;
-- range and spatial access;
-- timing and scaling;
-- information advantage;
-- commitment and exposure;
-- flexibility;
-- opportunity cost;
-- dependence on setup or allies;
-- opponent response windows.
+- the behavior it encourages;
+- the main strength/cost relationship;
+- the counterplay it creates or removes;
+- the design question it helps answer.
 
-The list is a diagnostic aid, not a required universal framework.
+Long chat reasoning does not need to be copied into the repository when the underlying facts are preserved well enough to reproduce the reasoning later.
 
-### 5. Identify decisions and trade-offs
+### 6. Identify kit/system relationships
 
-Ask what meaningful choices the design creates.
+Record causal connections that matter, especially when:
 
-A useful decision normally has competing consequences. Examples include spending versus saving, damage versus safety, farming versus pressure, entering versus holding position, using a cooldown now versus preserving it, buying immediate tempo versus scaling, or revealing information in exchange for an objective.
+- one ability creates the condition another ability needs;
+- one ability pays for the risk created by another;
+- multiple abilities share one growth resource;
+- an upgrade reconnects a secondary mechanic to the character's core action;
+- a weakness is deliberately left to another system rather than solved internally.
 
-If one option dominates without meaningful context, investigate whether the interesting design lies somewhere else.
+Do not treat simple thematic similarity or two abilities both dealing damage as meaningful synergy by itself.
 
-### 6. Identify counterplay and failure modes
+### 7. Close with a compact case summary
 
-Treat counterplay as part of the design's power structure.
+End with:
 
-Ask:
+- the design identity;
+- the most important recurring behavior;
+- the main counterplay/cost structure;
+- a small number of candidate transferable lessons;
+- uncertainties that later cases may resolve.
 
-- What can the opponent see or predict?
-- What response time exists?
-- Can the effect miss, be interrupted, be dispelled, be outranged, be kited, be baited, or be played around spatially?
-- What resources must the opponent spend to answer it?
-- What happens when the user commits at the wrong time?
-- Which weaknesses are produced by the same rule that creates the strength?
-
-Prefer weaknesses that are structurally connected to the strength over arbitrary penalties added afterward.
-
-### 7. State the design identity
-
-Summarize the behavior that the complete design repeatedly rewards.
-
-Identity should emerge from aligned mechanics, incentives, strengths, weaknesses, and constraints. Avoid relying only on theme, lore, role labels, or player reputation.
-
-### 8. Extract transferable lessons
-
-End with a small number of lessons that another designer could test or use.
-
-A strong lesson should:
-
-- be more general than the specific Dota case;
-- name the conditions under which it applies;
-- explain a causal relationship rather than merely praise the design;
-- preserve relevant trade-offs and failure modes;
-- be falsifiable by later cases.
-
-Avoid empty slogans such as "make every choice meaningful" unless the case explains a concrete mechanism for doing so.
-
-### 9. Record uncertainties and counterexamples
-
-State what the case does not establish.
-
-If a conclusion depends on role, skill bracket, patch context, team composition, player knowledge, or another condition, record it. Later cases should be allowed to narrow or overturn the lesson.
+Candidate lessons remain case-level until multiple deliberately varied cases support them.
 
 ## Hero case guide
 
-A hero analysis should normally consider the following areas, while spending detail according to the hero rather than mechanically filling every heading.
+### One hero, one durable case document
 
-### Baseline attributes and combat chassis
+Each hero should normally have one durable Markdown case file containing the reusable factual baseline, design branches, deleted abilities, compact analysis, and case summary.
 
-Consider:
+Do not split one hero into separate fact, analysis, history, Shard, Scepter, or talent files unless the single file becomes genuinely unmanageable.
 
-- primary attribute and starting attributes;
-- attribute growth;
-- health, mana, armor, resistance, regeneration;
-- movement speed and turning;
-- melee/ranged attack behavior;
-- attack range, attack timing, BAT, projectile behavior, acquisition range;
-- vision and other baseline parameters when they materially affect behavior.
+### Baseline combat chassis
 
-Ask what the hero already wants to do **before** considering the active skill kit.
+Preserve a compact current table with the values most likely to matter later, normally including:
+
+- primary attribute;
+- starting STR/AGI/INT and growth;
+- starting health and mana when available;
+- health and mana regeneration when useful;
+- starting armor;
+- starting attack damage;
+- melee/ranged and attack range;
+- base attack speed and BAT;
+- attack point and backswing where useful;
+- movement speed and turn rate;
+- day/night vision.
+
+Record only additional baseline parameters when they explain a real design feature.
 
 ### Growth and progression
 
-Consider:
+Preserve growth facts that change what the hero can do or that are likely to support later numerical comparison:
 
 - attribute growth;
 - ability-level scaling;
+- thresholds, frequency, radius, or duration progression;
+- talents;
 - hero-level scaling;
-- talent and upgrade choices;
-- item-dependent scaling;
-- power spikes, plateaus, and late-game transformations.
+- permanent growth mechanics;
+- Shard/Scepter/Innate progression when relevant.
 
-Focus on how the hero's available behavior changes over time, not merely whether the numbers increase.
+Focus analysis on whether progression changes magnitude, frequency, reliability, access, coverage, commitment, or action space.
 
-### Individual ability design
+### Individual abilities and design branches
 
-For each important ability, examine the relevant combination of:
+For each important ability, normally record:
 
-- capability provided;
-- target and targeting method;
-- magnitude;
-- range and area;
-- cast point, backswing, projectile or travel behavior;
-- cooldown, charges, duration, and uptime;
-- mana, health, or other costs;
-- reliability and setup requirements;
-- scaling and upgrades;
-- counterplay and response windows.
+1. **Current factual baseline** - current defining rules and key values.
+2. **Historical design branches** - distinct mechanisms that materially changed how the ability worked.
+3. **Upgrade branches** - Talent, Shard, Scepter, Facet, Innate, or other effects that substantially changed the ability.
+4. **Compact design note** - a few sentences at most.
 
-Then explain what behavior that ability rewards.
+Put an upgrade under the ability it extends when that is the clearest representation. If an upgrade creates a genuinely separate ability such as Swiftslash, give that ability its own section inside the same hero document.
+
+### Deleted abilities
+
+Deleted abilities are recorded in the same hero document when they represent a distinct design solution. Mark them clearly as historical/removed and preserve their defining mechanics and key values.
 
 ### Kit design
 
-Study the full ability set as one behavioral system.
-
-Ask:
-
-- Which abilities create conditions for the others?
-- Which capabilities deliberately overlap or remain absent?
-- What internal trade-offs exist?
-- Is there one fixed combo, or a flexible set of sequencing decisions?
-- How do passive and active pieces reinforce the same behavior?
-- Which weakness prevents the kit from solving every problem itself?
-
-### Full-hero behavior
-
-Describe how the hero tends to approach:
-
-- lane interaction;
-- farming and resource acquisition;
-- movement around the map;
-- skirmishes;
-- team fights;
-- initiation and follow-up;
-- target selection;
-- pursuit and retreat;
-- defensive play;
-- playing from ahead or behind.
-
-### Item interaction
-
-Include item analysis when the hero's behavior or viability materially depends on certain item capabilities. Distinguish between:
-
-- items that amplify an existing strength;
-- items that repair a structural weakness;
-- items that unlock a new action pattern;
-- items that change timing or commitment;
-- items that are merely efficient statistics.
+Keep this section compact. Record the causal relationships among abilities and the most important capability gaps. Detailed item analysis is deferred to the equipment phase unless an item interaction is inseparable from understanding the hero's design.
 
 ### Hero conclusion
 
 End with:
 
-- the hero's design identity;
-- the main strengths and where they are allocated;
-- the weaknesses and counterplay that pay for those strengths;
-- the decisions the player repeatedly makes;
-- transferable design lessons;
-- unresolved questions to compare against later heroes.
+- design identity;
+- core mechanical relationships;
+- main costs/counterplay;
+- a few case-supported design lessons;
+- unresolved comparison questions.
 
 ## Equipment and item case guide
 
-For equipment or other items, focus on:
+For equipment or other items, preserve the values needed for later comparison while focusing analysis on:
 
 - acquisition price and timing;
 - build path and intermediate value;
@@ -256,28 +211,25 @@ For equipment or other items, focus on:
 - whether the item amplifies, repairs, or transforms a hero's behavior;
 - which opponents or situations increase or reduce its value;
 - what counterplay becomes available after the item is revealed;
-- whether the item creates a strategic timing window;
-- transferable lessons about optional capability systems.
+- whether the item creates a strategic timing window.
 
 ## System case guide
 
 For lane, creep, economy, objective, terrain, vision, combat, or other systemic rules:
 
-1. identify the local rule;
-2. identify who makes decisions because of it;
-3. identify the resource, spatial, temporal, or informational pressure it creates;
-4. identify how players can manipulate or contest it;
+1. preserve the rules and values needed for later comparison;
+2. identify who makes decisions because of them;
+3. identify the resource, spatial, temporal, or informational pressure created;
+4. identify how players can manipulate or contest the rule;
 5. connect the local rule to match pacing and broader strategy;
-6. compare with nearby rules that produce a different behavior;
-7. extract a transferable principle with conditions.
-
-System analysis should explain why a rule exists as part of gameplay, not merely document that it exists.
+6. preserve meaningful alternative historical designs when they illuminate the design space;
+7. extract only compact candidate lessons until multiple cases support synthesis.
 
 ## Cross-case synthesis
 
 Do not synthesize after every case.
 
-After a small deliberately varied group of cases, compare them along the questions that actually emerged. Candidate synthesis topics include:
+After a deliberately varied group exists, compare the stored factual records and ask which patterns actually survive contrast. Candidate synthesis topics include:
 
 - strength allocation and power budget;
 - capability versus numerical magnitude;
@@ -289,7 +241,7 @@ After a small deliberately varied group of cases, compare them along the questio
 - information and uncertainty;
 - counterplay;
 - identity through aligned strengths and weaknesses;
-- how optional items change a character's action space.
+- how optional upgrades change action space.
 
 A cross-case principle should name both the repeated pattern and the cases that challenge its limits.
 
@@ -298,17 +250,15 @@ A cross-case principle should name both the repeated pattern and the cases that 
 Avoid these research failure modes:
 
 - building a complete ontology before asking a design question;
-- collecting every visible parameter without explaining behavior;
+- storing a patch-by-patch chronology as if it were design analysis;
+- omitting reusable numerical facts so that later comparison requires fresh lookup;
+- preserving every minor balance-only number change;
+- copying long chat analysis when a shorter note plus good facts is enough;
 - treating a role label as a design explanation;
 - inferring designer intent from mechanics alone;
-- calling something "balanced" without identifying its costs and counterplay;
-- assuming stronger numbers imply stronger design;
-- promoting a pattern from one convenient case;
-- forcing every case through an identical exhaustive template;
-- preserving obsolete abstractions in current docs merely because work was already spent on them.
+- promoting a pattern from one or two convenient cases;
+- splitting one hero across many files without a clear retrieval benefit.
 
 ## Success condition
 
-A successful case should leave the project with something another game designer can use: a clearer causal model of how concrete rules create behavior, decisions, trade-offs, counterplay, identity, pacing, or information pressure.
-
-The repository should accumulate **design understanding**, not merely Dota 2 facts.
+A successful durable case should let a future session recover the important design facts, compare the case numerically and mechanically with other cases, and reconstruct or improve the analysis without needing the original chat transcript.

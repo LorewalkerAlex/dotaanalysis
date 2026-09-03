@@ -6,13 +6,14 @@ Only documents that actually exist should be listed here. Add sections or reorga
 
 ## Research methods
 
-- [`methods/design-case-analysis.md`](methods/design-case-analysis.md) - The current case-first research method. Concrete designs are analyzed for behavior, decisions, trade-offs, counterplay, identity, pacing, and transferable lessons before cross-case synthesis.
+- [`methods/design-case-analysis.md`](methods/design-case-analysis.md) - The current case-first method. Durable cases are fact-rich and analysis-light, preserve reusable numerical baselines, and organize historical mechanics as design branches rather than patch chronologies.
 
 ## Hero case studies
 
-No durable hero case studies yet.
+- [`heroes/axe.md`](heroes/axe.md) - Axe factual baseline and design branches: forced attacks, Counter Helix retaliation models, Battle Hunger variants, Culling Blade execution/growth, and removed Coat of Blood.
+- [`heroes/juggernaut.md`](heroes/juggernaut.md) - Juggernaut factual baseline and design branches: Blade Fury/attack-system integration, Healing Ward, Blade Dance scaling, Omnislash/Swiftslash, Bladeform, and removed Duelist.
 
-The active research node is to select and complete the first representative hero case. Hero research should cover the factual baseline needed for analysis, attributes and combat chassis, growth, individual abilities, kit composition, behavior, strengths/weaknesses/counterplay, relevant item interactions, and transferable design lessons.
+Hero cases use one durable document per hero. They preserve current comparison-ready values plus historically meaningful design branches and keep analytical commentary compact.
 
 ## Equipment and item case studies
 
@@ -36,7 +37,7 @@ No durable studies yet.
 
 ## Cross-case design principles
 
-No durable principle documents yet. Principles should be created only after multiple concrete cases provide enough evidence to state and pressure-test a reusable design lesson.
+No durable principle documents yet. Axe and Juggernaut contain case-level observations, but the cohort is not yet varied enough for durable cross-hero principles.
 
 ## Historical research direction
 
