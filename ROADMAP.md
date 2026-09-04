@@ -53,11 +53,11 @@ Indentation expresses the relationship between larger questions and their subque
       - [x] Alchemist - `docs/heroes/alchemist.md`
       - [x] Axe - `docs/heroes/axe.md`
       - [x] Bristleback - `docs/heroes/bristleback.md`
-      - [ ] Centaur Warrunner
-      - [ ] Chaos Knight
-      - [ ] Clockwerk
-      - [ ] Dawnbreaker
-      - [ ] Doom
+      - [x] Centaur Warrunner - `docs/heroes/centaur-warrunner.md`
+      - [x] Chaos Knight - `docs/heroes/chaos-knight.md`
+      - [x] Clockwerk - `docs/heroes/clockwerk.md`
+      - [x] Dawnbreaker - `docs/heroes/dawnbreaker.md`
+      - [x] Doom - `docs/heroes/doom.md`
       - [ ] Dragon Knight
       - [ ] Earth Spirit
       - [ ] Earthshaker
@@ -261,4 +261,4 @@ Indentation expresses the relationship between larger questions and their subque
 
 ## Current next action
 
-Study Centaur Warrunner, the next unfinished hero in the current Strength-group alphabetical order after the completed Alchemist, Axe, and Bristleback cases. Use the standard per-hero analysis sequence: verify the current chassis, identify the defining mechanic, follow causal kit relationships, preserve meaningful historical branches and progression upgrades, reconstruct whole-kit behavior, identify costs and counterplay, then close with compact case-level lessons. After Centaur Warrunner is durably recorded, continue to the next unfinished hero in the default attribute-group/alphabetical checklist, skipping heroes whose durable first pass is already complete.
+Study Dragon Knight, the next unfinished hero in the current Strength-group alphabetical order after the completed Alchemist, Axe, Bristleback, Centaur Warrunner, Chaos Knight, Clockwerk, Dawnbreaker, and Doom cases. Discussion may be as detailed as needed to understand the design, but durable hero notes should prioritize verified facts, comparison-useful numbers, and major skill-design or historical branches, with conclusions kept compact. After Dragon Knight is durably recorded, continue to the next unfinished hero in the default attribute-group/alphabetical checklist, skipping heroes whose durable first pass is already complete.
