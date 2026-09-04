@@ -50,9 +50,9 @@ Indentation expresses the relationship between larger questions and their subque
     - [x] Use Dota's default hero-grid ordering rather than research-defined design groups: Strength -> Agility -> Intelligence -> Universal, alphabetical within each group
     - [x] Treat the current ordering as an operational roster snapshot, not a design classification; as the live roster changes, insert new heroes alphabetically and move heroes if their attribute group changes
     - [ ] Strength heroes (36)
-      - [ ] Alchemist
+      - [x] Alchemist - `docs/heroes/alchemist.md`
       - [x] Axe - `docs/heroes/axe.md`
-      - [ ] Bristleback
+      - [x] Bristleback - `docs/heroes/bristleback.md`
       - [ ] Centaur Warrunner
       - [ ] Chaos Knight
       - [ ] Clockwerk
@@ -261,4 +261,4 @@ Indentation expresses the relationship between larger questions and their subque
 
 ## Current next action
 
-Study Alchemist, the first unfinished hero in the current Strength-group alphabetical order. Use the standard per-hero analysis sequence: verify the current chassis, identify the defining mechanic, follow causal kit relationships, preserve meaningful historical branches and progression upgrades, reconstruct whole-kit behavior, identify costs and counterplay, then close with compact case-level lessons. After Alchemist is durably recorded, continue to the next unfinished hero in the default attribute-group/alphabetical checklist, skipping heroes whose durable first pass is already complete.
+Study Centaur Warrunner, the next unfinished hero in the current Strength-group alphabetical order after the completed Alchemist, Axe, and Bristleback cases. Use the standard per-hero analysis sequence: verify the current chassis, identify the defining mechanic, follow causal kit relationships, preserve meaningful historical branches and progression upgrades, reconstruct whole-kit behavior, identify costs and counterplay, then close with compact case-level lessons. After Centaur Warrunner is durably recorded, continue to the next unfinished hero in the default attribute-group/alphabetical checklist, skipping heroes whose durable first pass is already complete.
